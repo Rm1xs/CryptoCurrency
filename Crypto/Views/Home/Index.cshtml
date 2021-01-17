@@ -2,59 +2,51 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="row">
+    <div class="col">
+        <div class="small-block">
+            <!----> <a href="/trade/inverse/BTCUSD" id="block">
+                <div class="small-block__container">
+                    <div class="small-block__content">
+                        <p brand="" class="small-block__name" id="from-to">BTC-USD</p>
+                        <div class="small-block__current">
+                            <p class="small-block__current-rate" id="rate">
+                            </p>
+                        </div>
+                    </div> <p class="small-block__value" id="live-value"></p>
+
+                    <div class="small-block__label-bg">
+                        <div class="small-block__label"><span>24hr Volume</span> <span class="24volClss" id="24volBTC"></span></div> <div class="small-block__label"><span>Market Capitalization</span> <span class="mkCapClss" id="MKTCAP"></span></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="col">
+        <div class="small-block">
+            <!----> <a href="/trade/inverse/BTCUSD" id="block">
+                <div class="small-block__container">
+                    <div class="small-block__content">
+                        <p brand="" class="small-block__name" id="from-to">ETH-USD</p>
+                        <div class="small-block__current">
+                            <p class="small-block__current-rate" id="rate2">
+                            </p>
+                        </div>
+                    </div> <p class="small-block__value" id="live-value2"></p>
+
+                    <div class="small-block__label-bg">
+                        <div class="small-block__label"><span>24hr Volume</span> <span class="24volClss" id="24volETH"></span></div>
+                        <div class="small-block__label"><span>Market Capitalization</span> <span class="mkCapClss" id="MKTCAPeth"></span></div>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+
+    </div>
 </div>
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
-
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
+<script src="~/js/BTC-MainForm.js"></script>
+<script src="~/js/ETH-MainForm.js"></script>

@@ -1,71 +1,182 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
+    font-family: 'Arvo', serif;
 }
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    font-family: 'Arvo', serif;
 }
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+/*navbar*/
+.bd-navbar .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem;
+    color: rgba(255,255,255,.85);
+}
+
+.bd-navbar {
+    min-height: 4rem;
+    background-color: #1830a3;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+}
+
+.btn-bd-login {
+    font-weight: 600;
+    color: #ffe484;
+    border-color: #ffe484;
+}
+
+
+
+.small-block__label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    line-height: 14px;
+    padding-top: 4px;
+    width: 100%;
+}
+
+.small-block {
+    display: inline-block;
+    font-size: 12px;
+    width: 25%;
+    position: relative;
+    text-align: initial;
+    vertical-align: top;
+}
+
+.small-block__container {
+    border-radius: 20px;
+    cursor: pointer;
+    filter: blur(0);
+    height: 200px;
+    width: 350px;
+    overflow: hidden;
+    position: relative;
+    transition: transform .25s ease-in,filter .15s linear;
+    will-change: transform,filter;
+    padding: 24px 20px;
+    background: #fff;
+    box-shadow: 0 9px 28px 8px rgba(0,0,0,.01), 0 6px 16px 0 rgba(0,0,0,.03), 0 3px 6px -4px rgba(0,0,0,.06);
+    border-radius: 18px;
+    margin: 30px auto 0;
+}
+
+.small-block__content {
+    border-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    transition: border-color .15s ease-in;
+}
+
+.small-block__name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    line-height: 26px;
+}
+
+.small-block__value {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    padding: 16px 0 14px;
+}
+
+.small-block__label-bg {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.small-block__kline {
+    width: 100%;
+    height: 76px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.small-block__current-rate {
+    padding: 0 8px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    font-weight: 900;
+    color: #fff;
+    border-radius: 8px;
 }
