@@ -1,6 +1,90 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>
+<!-- #region datatables files -->
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
+<script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js" defer></script>
+<!-- #endregion -->
+<div id="carouselExampleIndicators" style="margin-top:2%;" class="carousel slide container" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active row">
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare pharetra elit vitae mollis. Mauris consectetur semper diam ac pretium.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare pharetra elit vitae mollis. Mauris consectetur semper diam ac pretium.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-md-block d-none">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare pharetra elit vitae mollis. Mauris consectetur semper diam ac pretium.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare pharetra elit vitae mollis. Mauris consectetur semper diam ac pretium.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare pharetra elit vitae mollis. Mauris consectetur semper diam ac pretium.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-md-block d-none">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare pharetra elit vitae mollis. Mauris consectetur semper diam ac pretium.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
 
 
 <div class="row">
@@ -17,7 +101,8 @@
                     </div> <p class="small-block__value" id="live-value"></p>
 
                     <div class="small-block__label-bg">
-                        <div class="small-block__label"><span>24hr Volume</span> <span class="24volClss" id="24volBTC"></span></div> <div class="small-block__label"><span>Market Capitalization</span> <span class="mkCapClss" id="MKTCAP"></span></div>
+                        <div class="small-block__label"><span>24hr Volume</span> <span class="24volClss" id="24volBTC"></span></div>
+                        <div class="small-block__label"><span>Market Capitalization</span> <span class="mkCapClss" id="MKTCAP"></span></div>
                     </div>
                 </div>
             </a>
@@ -47,6 +132,46 @@
         </div>
 
     </div>
+
+
+    <div class="col">
+        <div class="small-block">
+            <!----> <a href="/trade/inverse/BTCUSD" id="block">
+                <div class="small-block__container">
+                    <div class="small-block__content">
+                        <p brand="" class="small-block__name" id="from-to">LTC-USD</p>
+                        <div class="small-block__current">
+                            <p class="small-block__current-rate" id="rate3">
+                            </p>
+                        </div>
+                    </div> <p class="small-block__value" id="live-value3"></p>
+
+                    <div class="small-block__label-bg">
+                        <div class="small-block__label"><span>24hr Volume</span> <span class="24volClss" id="24volLTC"></span></div>
+                        <div class="small-block__label"><span>Market Capitalization</span> <span class="mkCapClss" id="MKTCAPltc"></span></div>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+
+    </div>
 </div>
+
+
+<table id="example" class="display nowrap" style="width:100%">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>symbol</th>
+            <th>partner_symbol</th>
+            <th>data_available_from</th>
+        </tr>
+    </thead>
+</table>
+
 <script src="~/js/BTC-MainForm.js"></script>
 <script src="~/js/ETH-MainForm.js"></script>
+<script src="~/js/LTC-MainForm.js"></script>
+
+<script src="~/js/GetAllTokens.js"></script>

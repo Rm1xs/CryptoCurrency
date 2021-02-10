@@ -4,7 +4,7 @@ var ccStreamer = new WebSocket('wss://streamer.cryptocompare.com/v2?api_key=' + 
 ccStreamer.onopen = function onStreamOpen() {
     var subRequest = {
         "action": "SubAdd",
-        "subs": ["2~Coinbase~BTC~USD"]
+        "subs": ["2~Coinbase~ETH~USD"]
     };
     ccStreamer.send(JSON.stringify(subRequest));
 }
@@ -13,6 +13,6 @@ ccStreamer.onmessage = function onStreamMessage(message) {
     var message = event.data;
     var arr_from_json = JSON.parse(message);
     if (arr_from_json.PRICE != null) {
-        document.getElementById('live-value').innerHTML = arr_from_json.PRICE;
+        document.getElementById('live-value2').innerHTML = arr_from_json.PRICE;
     }
 }

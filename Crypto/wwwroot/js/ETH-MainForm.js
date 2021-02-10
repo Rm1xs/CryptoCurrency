@@ -9,7 +9,6 @@ async function fetchAsync(url) {
         document.getElementById('24volETH').innerHTML = data.DISPLAY.ETH.USD.VOLUME24HOUR;
         document.getElementById('MKTCAPeth').innerHTML = data.DISPLAY.ETH.USD.MKTCAP;
 
-
         document.getElementsByClassName('small-block__value')[1].style.color = '#bc4767';
         document.getElementsByClassName('small-block__current-rate')[1].style.color = 'White';
         document.getElementsByClassName('small-block__current-rate')[1].style.backgroundColor = '#bc4767';
@@ -18,9 +17,9 @@ async function fetchAsync(url) {
     }
     else {
         document.getElementById('live-value2').innerHTML = data.DISPLAY.ETH.USD.PRICE;
-        document.getElementById('rate2').innerHTML = data.DISPLAY.BTC.ETH.CHANGEPCT24HOUR + '%';
-        document.getElementById('24volETH').innerHTML = data.DISPLAY.BTC.ETH.VOLUME24HOUR;
-        document.getElementById('MKTCAPeth').innerHTML = data.DISPLAY.BTC.ETH.MKTCAP;
+        document.getElementById('rate2').innerHTML = data.DISPLAY.ETH.USD.CHANGEPCT24HOUR + '%';
+        document.getElementById('24volETH').innerHTML = data.DISPLAY.ETH.USD.VOLUME24HOUR;
+        document.getElementById('MKTCAPeth').innerHTML = data.DISPLAY.ETH.USD.MKTCAP;
 
         document.getElementsByClassName('small-block__value')[1].style.color = '#79b83d';
         document.getElementsByClassName('small-block__current-rate')[1].style.color = 'White';
