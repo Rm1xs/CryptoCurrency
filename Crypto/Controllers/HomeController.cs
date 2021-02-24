@@ -40,12 +40,12 @@ namespace Crypto.Controllers
 
         public IActionResult getalltokens()
         {
-            List<Datum> meny_data = new List<Datum>();
+            List<TokenList> meny_data = new List<TokenList>();
             var data = makeAPICall();
             var result = JsonConvert.DeserializeObject<CryptoData>(data, Converter.Settings);
             foreach (var item in result.Data)
             {
-                meny_data.Add(new Datum { Id = item.Id, Name = item.Name, LastUpdated = item.LastUpdated, MaxSupply = item.MaxSupply, TotalSupply = item.TotalSupply});
+                meny_data.Add(new TokenList { Id = item.Id, Name = item.Name,  TotalSupply = item.TotalSupply, Price = Math.Round(item.Quote.Usd.Price, 3, MidpointRounding.ToEven), MarketCap = item.Quote.Usd.MarketCap, PercentChange24H = Math.Round(item.Quote.Usd.PercentChange24H, 1, MidpointRounding.ToEven), Symbol = item.Symbol, Volume24H = Math.Round(item.Quote.Usd.Volume24H, 1, MidpointRounding.ToEven)});
             }
             return Json(new { data = meny_data });
         }

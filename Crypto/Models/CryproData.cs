@@ -52,8 +52,8 @@ namespace Crypto.Models
         [JsonProperty("platform")]
         public Platform Platform { get; set; }
 
-        [JsonProperty("cmc_rank")]
-        public long CmcRank { get; set; }
+        //[JsonProperty("cmc_rank")]
+        //public long CmcRank { get; set; }
 
         [JsonProperty("last_updated")]
         public DateTimeOffset LastUpdated { get; set; }
